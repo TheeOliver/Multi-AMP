@@ -336,8 +336,8 @@ def plot_pca_variance(model_name, dataset_name, pca, output_dir):
     cumvar = np.cumsum(pca.explained_variance_ratio_) * 100
     ax.plot(range(1, len(cumvar) + 1), cumvar, 'o-',
             color='steelblue', linewidth=2, markersize=5)
-    ax.axhline(90, color='red', linestyle='--', alpha=0.6, label='90% варијанса')
-    ax.axhline(95, color='orange', linestyle='--', alpha=0.6, label='95% варијанса')
+    ax.axhline(90, color='red', linestyle='--', alpha=0.6, label='90% variance')
+    ax.axhline(95, color='orange', linestyle='--', alpha=0.6, label='95% varience')
     ax.set_xlabel('Number of PCA components', fontsize=10)
     ax.set_ylabel('Cumulative variance (%)', fontsize=10)
     ax.set_title(f'{model_name} [{dataset_name}] — PCA Scree Plot',
